@@ -20,7 +20,6 @@
 # Строка містить літеру "а" більше 20 разів.
 
 i = 0
-
 while i < 10:
     txt = str(input("Введіть текст:"))
     lit = str(input("Введіть літеру:"))
@@ -31,8 +30,7 @@ while i < 10:
     for x in txt:
         if x == lit:
             n += 1
-
-    print(n)
+    #print(n)
     if n == 0:
         print(f"строка не містить літеру '{lit}'")
     elif n < 10:

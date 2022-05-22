@@ -10,30 +10,29 @@
 
 import random
 loop = 0
-while not(loop):
+while not loop:
 
     nmb = int(input("введіть кількисть випадковіх чисел від 10 до 50: "))
-    while nmb < 10 or nmb > 50:
+    if nmb < 10 or nmb > 50:
         print("!!!введено число менше 10 або більше 50")
-        nmb = int(input("введіть кількисть випадковіх чисел від 10 до 50: "))
+        continue
 
     rndm = []
     for _ in range(nmb):
         rndm.append(50+(round(random.random()*100)%50))
     print("\nсгенерована випадкова послідовність:")
     print(rndm)
-    rndms = rndm
 
     n = 0
-    for i in range(len(rndm)-2):
-        if rndm[i] < rndm[i+1] and rndm[i+2] < rndm[i+1]:
-            #print(rndm[i], rndm[i+1], rndm[i+2])
+    for i in range(len(rndm)-1):
+        #print(f"i={i}")
+        if rndm[i-1] < rndm[i] and rndm[i] > rndm[i+1]:
+            #print(rndm[i-1], rndm[i], rndm[i+1])
             n += 1
-            #print(n)
+            #print(f"n={n}")
     print(f"\nкількість елементів списку які більше обох своїх сусідніх: {n}")
 
     loop = input("\nдля повторного вводу даних натиснить ENTER"
                  "\nдля виходу введить будь який символ: ")
-    if not(loop):
+    if not loop:
         continue
-    break

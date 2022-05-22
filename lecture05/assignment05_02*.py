@@ -17,7 +17,7 @@
 
 
 loop = 0
-while not loop:
+while not(loop):
 
     txt = input("введіть речення:")
     while len(txt) == 0:
@@ -29,6 +29,7 @@ while not loop:
         wrd = sorted(wrd)
         wrd = ''.join(wrd)
         #print(wrd)
+        print(type(wrd))
         txts.append(wrd)
     txts = ' '.join(txts)
     print("\nвідсортовані літери у кожному слові:")
@@ -46,6 +47,6 @@ while not loop:
 
     loop = input("\nдля повторного вводу даних натиснить ENTER"
                  "\nдля виходу введить будь який символ: ")
-    if not loop:
+    if not(loop):
         continue
     break

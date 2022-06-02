@@ -12,12 +12,16 @@ ALLOWED_INPUT = {CELCISUS_SIGN, FAHRENHEIT_SIGN, QUIT}
 
 def convert_to_celsius(value):
     """Converts degrees value from fahrenheit celsius to."""
-    pass
+    #pass
+    t = (value - 32) *5/9
+    return t
 
 
 def convert_to_fahrengeit(value):
     """Converts degrees value from celsius to fahrenheit."""
-    pass
+    #pass
+    t = value * 9/5 + 32
+    return t
 
 
 def converter(value, target):

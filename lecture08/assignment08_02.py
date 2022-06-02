@@ -12,3 +12,22 @@
             * search_linearly("hello world!", "!") -> повертає 11
             * search_linearly(tuple(range(10)), 10) -> повертає -1
 """
+
+#v1, v2 = [1, 8, 7, 33, 9, 2], 8
+
+#v1, v2 = "hello world!", "!"
+
+v1, v2 = tuple(range(10)), 10
+
+def search_linearly(a, b):
+    n = 0
+    for i in a:
+        if i == b:
+            break
+        n +=1
+    if (n+1) > len(a):
+        n = -1
+    return n
+
+print(search_linearly(v1, v2))
+
